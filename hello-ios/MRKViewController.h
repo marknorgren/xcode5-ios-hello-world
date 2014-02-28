@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MRKViewController : UIViewController
+@interface MRKViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @end
