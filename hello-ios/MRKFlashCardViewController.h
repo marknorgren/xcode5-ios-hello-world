@@ -13,6 +13,4 @@
 @property NSUInteger pageIndex;
 
 
--(instancetype) initWithIndex:(NSUInteger)index;
-
 @end

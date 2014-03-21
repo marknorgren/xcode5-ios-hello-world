@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIView *theView;
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
+@property (weak, nonatomic) IBOutlet UIView *vcContainer;
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
 @end
@@ -30,16 +31,12 @@
     [self setNewCard];
 	
     // Create page view controller
-    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.pageViewController.dataSource = self;
     
-    
-    
-    
-    MRKFlashCardViewController *startingViewController = [[MRKFlashCardViewController alloc] initWithIndex:0];
-    NSArray *viewControllers = @[startingViewController];
+    MRKFlashCardViewController *startingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FlashCardViewController"];
+    NSArray *viewControllers = @[startingVC];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
+//    self.vcContainer = self.pageViewController.view;
 
 }
 - (IBAction)showAnswerPressed:(id)sender {
@@ -69,32 +66,45 @@
 
 #pragma mark - Page View Controller Data Source
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+      viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    NSUInteger index = ((MRKFlashCardViewController*) viewController).pageIndex;
-    
-    if ((index == 0) || (index == NSNotFound)) {
-        return nil;
-    }
-    
-    index--;
-    return [[MRKFlashCardViewController alloc] initWithIndex:index];
+//    NSUInteger index = ((MRKFlashCardViewController*) viewController).pageIndex;
+//    
+//    if ((index == 0) || (index == NSNotFound)) {
+//        return nil;
+//    }
+//    
+//    index--;
+//    MRKFlashCardViewController *startingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FlashCardViewController"];
+
+    return nil;
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+       viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = ((MRKFlashCardViewController*) viewController).pageIndex;
-    
-    if (index == NSNotFound) {
-        return nil;
-    }
-    
-    index++;
+//    NSUInteger index = ((MRKFlashCardViewController*) viewController).pageIndex;
+//    
+//    if (index == NSNotFound) {
+//        return nil;
+//    }
+//
+//    index++;
 //    if (index == [self.pageTitles count]) {
 //        index = 0;
 //        return [self viewControllerAtIndex:index];
 //    }
-    return [[MRKFlashCardViewController alloc] initWithIndex:index];
+    MRKFlashCardViewController *startingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FlashCardViewController"];
+
+    return startingVC;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"embedContainer"]) {
+        self.pageViewController = segue.destinationViewController;
+    }
 }
 
 //- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
