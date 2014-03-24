@@ -72,7 +72,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXg-Le-EmV">
-                                        <rect key="frame" x="38" y="3" width="76" height="50"/>
+                                        <rect key="frame" x="42" y="4" width="67" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,21 +85,21 @@
                                     <constraint firstAttribute="width" constant="152" id="kyI-8O-vTm"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2H-NI-OL1">
-                                <rect key="frame" x="119" y="68" width="70" height="50"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2H-NI-OL1">
+                                <rect key="frame" x="122" y="68" width="67" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk9-J4-p2v">
-                                <rect key="frame" x="289" y="66" width="70" height="50"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk9-J4-p2v">
+                                <rect key="frame" x="289" y="66" width="67" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU6-aT-8NK">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU6-aT-8NK">
                                 <rect key="frame" x="228" y="68" width="24" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
@@ -109,7 +109,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.69803921568627447" green="0.81960784313725488" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hk9-J4-p2v" firstAttribute="leading" secondItem="LU6-aT-8NK" secondAttribute="trailing" constant="37" id="JoM-ia-Lal"/>
+                            <constraint firstItem="LU6-aT-8NK" firstAttribute="leading" secondItem="I2H-NI-OL1" secondAttribute="trailing" constant="39" id="Mi5-GK-eJw"/>
+                            <constraint firstItem="LU6-aT-8NK" firstAttribute="top" secondItem="qj7-K9-2cM" secondAttribute="bottom" constant="68" id="Mik-fO-az9"/>
+                            <constraint firstItem="I2H-NI-OL1" firstAttribute="top" secondItem="qj7-K9-2cM" secondAttribute="bottom" constant="68" id="Vfs-eB-Lu8"/>
                             <constraint firstAttribute="centerY" secondItem="7yu-Iz-cfN" secondAttribute="centerY" constant="48.5" id="iwS-fq-w7b"/>
+                            <constraint firstItem="hk9-J4-p2v" firstAttribute="top" secondItem="qj7-K9-2cM" secondAttribute="bottom" constant="66" id="kog-jF-NhV"/>
+                            <constraint firstAttribute="centerX" secondItem="LU6-aT-8NK" secondAttribute="centerX" id="oiW-1S-SMG"/>
                             <constraint firstAttribute="centerX" secondItem="7yu-Iz-cfN" secondAttribute="centerX" id="p4b-6C-m4T"/>
                         </constraints>
                     </view>
