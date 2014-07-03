@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -16,15 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cga-TT-wxx">
-                                <rect key="frame" x="361" y="974" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U49-yP-1vv">
-                                <rect key="frame" x="20" y="20" width="728" height="946"/>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U49-yP-1vv">
+                                <rect key="frame" x="20" y="20" width="728" height="984"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -33,6 +26,12 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="U49-yP-1vv" secondAttribute="centerX" id="Mz7-vC-xdM"/>
+                            <constraint firstItem="U49-yP-1vv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="chq-Om-1o9"/>
+                            <constraint firstAttribute="centerY" secondItem="U49-yP-1vv" secondAttribute="centerY" id="fOp-WC-VPA"/>
+                            <constraint firstItem="U49-yP-1vv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="sEe-DY-5wb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cSp-Lb-7nb"/>
                     <connections>
@@ -67,7 +66,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7yu-Iz-cfN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7yu-Iz-cfN" userLabel="Answer Round Rect">
                                 <rect key="frame" x="164" y="124" width="152" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -106,14 +105,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double tap to reveal answer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR7-4x-dfH">
+                                <rect key="frame" x="133" y="189" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.69803921568627447" green="0.81960784313725488" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hR7-4x-dfH" firstAttribute="top" secondItem="7yu-Iz-cfN" secondAttribute="bottom" constant="10" id="1MN-2w-lCG"/>
+                            <constraint firstAttribute="centerX" secondItem="hR7-4x-dfH" secondAttribute="centerX" id="1aB-0h-tXB"/>
                             <constraint firstItem="hk9-J4-p2v" firstAttribute="leading" secondItem="LU6-aT-8NK" secondAttribute="trailing" constant="37" id="JoM-ia-Lal"/>
+                            <constraint firstItem="7yu-Iz-cfN" firstAttribute="top" secondItem="hk9-J4-p2v" secondAttribute="bottom" constant="10" id="M3c-Da-Y6d"/>
                             <constraint firstItem="LU6-aT-8NK" firstAttribute="leading" secondItem="I2H-NI-OL1" secondAttribute="trailing" constant="39" id="Mi5-GK-eJw"/>
                             <constraint firstItem="LU6-aT-8NK" firstAttribute="top" secondItem="qj7-K9-2cM" secondAttribute="bottom" constant="68" id="Mik-fO-az9"/>
                             <constraint firstItem="I2H-NI-OL1" firstAttribute="top" secondItem="qj7-K9-2cM" secondAttribute="bottom" constant="68" id="Vfs-eB-Lu8"/>
-                            <constraint firstAttribute="centerY" secondItem="7yu-Iz-cfN" secondAttribute="centerY" constant="48.5" id="iwS-fq-w7b"/>
+                            <constraint firstItem="7yu-Iz-cfN" firstAttribute="top" secondItem="LU6-aT-8NK" secondAttribute="bottom" constant="8" id="cx8-Wi-vRk"/>
+                            <constraint firstItem="7yu-Iz-cfN" firstAttribute="top" secondItem="I2H-NI-OL1" secondAttribute="bottom" constant="8" id="fd4-gj-kmP"/>
                             <constraint firstItem="hk9-J4-p2v" firstAttribute="top" secondItem="qj7-K9-2cM" secondAttribute="bottom" constant="66" id="kog-jF-NhV"/>
                             <constraint firstAttribute="centerX" secondItem="LU6-aT-8NK" secondAttribute="centerX" id="oiW-1S-SMG"/>
                             <constraint firstAttribute="centerX" secondItem="7yu-Iz-cfN" secondAttribute="centerX" id="p4b-6C-m4T"/>
@@ -127,6 +137,7 @@
                     <connections>
                         <outlet property="answerLabel" destination="VXg-Le-EmV" id="5E7-ei-A4g"/>
                         <outlet property="answerOutlineView" destination="7yu-Iz-cfN" id="FZ0-iv-BSw"/>
+                        <outlet property="answerRoundRectView" destination="7yu-Iz-cfN" id="wWQ-uD-jk5"/>
                         <outlet property="operandOneLabel" destination="I2H-NI-OL1" id="rAg-6L-NuI"/>
                         <outlet property="operandTwoLabel" destination="hk9-J4-p2v" id="bhM-Nb-4BL"/>
                         <outlet property="operatorLabel" destination="LU6-aT-8NK" id="2WA-TA-YRW"/>

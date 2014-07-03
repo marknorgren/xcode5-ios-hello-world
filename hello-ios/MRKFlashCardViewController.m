@@ -7,6 +7,7 @@
 //
 
 #import "MRKFlashCardViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #include <stdlib.h>
 
 @interface MRKFlashCardViewController ()
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *operandTwoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 @property (weak, nonatomic) IBOutlet UIView *answerOutlineView;
+@property (weak, nonatomic) IBOutlet UIView *answerRoundRectView;
 
 @end
 
@@ -37,6 +39,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // round corners
+    self.answerRoundRectView.layer.cornerRadius = 10.0;
+    self.answerRoundRectView.layer.masksToBounds = YES;
     
     int r_one = arc4random() % 100;
     int r_two = arc4random() % 100;
